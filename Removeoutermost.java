@@ -1,17 +1,17 @@
 public class Removeoutermost {
     public String removeOuterParentheses(String s) {
         StringBuilder result = new StringBuilder();
-        int openCount = 0; 
+        int Count = 0; 
         
         for (char ch : s.toCharArray()) {
             if (ch == '(') {
-                if (openCount > 0) {
+                if (Count > 0) {
                     result.append(ch);
                 }
-                openCount++;
+                Count++;
             } else if (ch == ')') {
-                openCount--;
-                if (openCount > 0) {
+                Count--;
+                if (Count > 0) {
                     result.append(ch);
                 }
             }
